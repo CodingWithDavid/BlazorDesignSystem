@@ -1,0 +1,22 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<div class="flex flex-grow">
+    <div class="w-1/2 m-16">
+        <span class="font-extrabold text-7xl tracking-wide mb-6">Counter</span>
+
+        <p>Current count: @currentCount</p>
+
+        <button @onclick="IncrementCount" class="bg-gradient-to-br from-primary-500 to-primary-600 px-4 py-2 rounded text-primary-50 transition duration-300 ease-in-out transform hover:scale-150">Click me</button>
+    </div>
+</div>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
